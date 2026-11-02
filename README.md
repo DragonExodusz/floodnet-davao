@@ -4,6 +4,12 @@
 
 **Complete project report and instructions:** [reports/PROJECT_REPORT.md](reports/PROJECT_REPORT.md)
 
+**Downloadable Word report:** `FloodNet_Davao_ML_Project_Report.docx` is generated in the parent folder by running:
+
+```powershell
+conda run -n floodnet-ml python scripts\export_report_docx.py
+```
+
 The source geospatial data is in the sibling `floodnetData\data` directory.
 This project starts by auditing the Davao layers before building a training
 dataset.

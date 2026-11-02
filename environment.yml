@@ -13,3 +13,5 @@ dependencies:
   - uvicorn
   - pandas
   - numpy
+  - pillow
+  - python-docx
