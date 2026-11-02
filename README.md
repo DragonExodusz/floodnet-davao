@@ -2,6 +2,8 @@
 
 **Live map:** <https://floodnet-davao.onrender.com>
 
+**Complete project report and instructions:** [reports/PROJECT_REPORT.md](reports/PROJECT_REPORT.md)
+
 The source geospatial data is in the sibling `floodnetData\data` directory.
 This project starts by auditing the Davao layers before building a training
 dataset.
