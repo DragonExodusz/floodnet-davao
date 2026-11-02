@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "FloodNet: Create Python environment",
+            "type": "process",
+            "command": "${env:USERPROFILE}\\miniforge3\\Scripts\\conda.exe",
+            "args": [
+                "env",
+                "create",
+                "-f",
+                "environment.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "FloodNet: Start local website",
+            "type": "process",
+            "command": "${env:USERPROFILE}\\miniforge3\\Scripts\\conda.exe",
+            "args": [
+                "run",
+                "--no-capture-output",
+                "-n",
+                "floodnet-ml",
+                "uvicorn",
+                "app:app",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8000"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "floodnet",
+                "pattern": [
+                    {
+                        "regexp": "^(.*)$"
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^INFO:     Started server process",
+                    "endsPattern": "^INFO:     Uvicorn running on http://127\\.0\\.0\\.1:8000"
+                }
+            }
+        }
+    ]
+}

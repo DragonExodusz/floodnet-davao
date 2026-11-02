@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "FloodNet Davao: Run local website",
+            "url": "http://127.0.0.1:8000",
+            "webRoot": "${workspaceFolder}\\web",
+            "preLaunchTask": "FloodNet: Start local website"
+        }
+    ]
+}

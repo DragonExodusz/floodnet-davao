@@ -94,6 +94,25 @@ The map is a student-project visualization, not an operational flood forecast
 or a source of emergency guidance. Estimated scores describe similarity to the
 provided scenario labels; they do not give a chance or date of future flooding.
 
+### Run it from VS Code
+
+1. In VS Code, choose **File → Open Folder...** and open the `floodnet-ml`
+   project folder (the folder containing `app.py` and `environment.yml`).
+2. If the Conda environment has not been set up on this computer, open the
+   Command Palette with **Ctrl+Shift+P**, choose **Tasks: Run Task**, then run
+   **FloodNet: Create Python environment**. This setup task is only needed
+   once.
+3. Open **Run and Debug** with **Ctrl+Shift+D**, select
+   **FloodNet Davao: Run local website**, then press **F5**. VS Code starts
+   the local Python server and opens the map in Chrome.
+4. Present the website at <http://127.0.0.1:8000>. Stop the server by pressing
+   **Shift+F5** in VS Code or **Ctrl+C** in the server terminal.
+
+The launch profile and tasks are defined in `.vscode\launch.json` and
+`.vscode\tasks.json`. On Windows, this setup expects Miniforge installed at
+`%USERPROFILE%\miniforge3` and the `floodnet-ml` Conda environment. If the
+Conda environment already exists, skip the one-time setup task.
+
 ## Publish on GitHub and Render
 
 The website can be deployed from GitHub using the included Dockerfile and
