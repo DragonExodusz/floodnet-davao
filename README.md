@@ -1,5 +1,7 @@
 # FloodNet Davao ML
 
+**Live map:** <https://floodnet-davao.onrender.com>
+
 The source geospatial data is in the sibling `floodnetData\data` directory.
 This project starts by auditing the Davao layers before building a training
 dataset.
@@ -113,6 +115,11 @@ large model files are not needed to run the deployed map and are excluded.
    provides a website URL when the deployment finishes.
 4. Open that URL and test the scenario selector and map. The map needs an
    internet connection for OpenStreetMap tiles and the Leaflet library.
+
+The free Render service may sleep while idle; its first request after a quiet
+period can take roughly 50 seconds to wake up. This blueprint uses the public
+repository URL, so future commits might need a manual deploy from the Render
+dashboard.
 
 The prediction file exceeds GitHub's 50 MB warning threshold but is below the
 100 MB per-file limit. GitHub may warn when it is committed. Never add the
