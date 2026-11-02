@@ -1,0 +1,15 @@
+name: floodnet-ml
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - geopandas
+  - pyogrio
+  - rasterio
+  - scikit-learn
+  - pyproj
+  - joblib
+  - fastapi
+  - uvicorn
+  - pandas
+  - numpy

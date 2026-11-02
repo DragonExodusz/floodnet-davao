@@ -1,0 +1,145 @@
+{
+  "dataset": "C:\\Users\\Administrator\\Documents\\floodnet\\floodnet-ml\\data\\processed\\davao_training.gpkg",
+  "rows": 199866,
+  "validation": {
+    "method": "GroupShuffleSplit by 5 km UTM spatial blocks",
+    "test_size_target": 0.2,
+    "train_rows": 130073,
+    "test_rows": 69793,
+    "train_blocks": 146,
+    "test_blocks": 37,
+    "random_state": 42
+  },
+  "features": [
+    "highway",
+    "log_length_m",
+    "base_speed_kmh",
+    "min_elevation",
+    "midpoint_lon",
+    "midpoint_lat",
+    "elevation_range_m",
+    "slope_percent"
+  ],
+  "scenarios": {
+    "flood_5yr": {
+      "baseline_most_frequent": {
+        "accuracy": 0.5720774289685212,
+        "balanced_accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix_labels_0_1": [
+          [
+            39927,
+            0
+          ],
+          [
+            29866,
+            0
+          ]
+        ]
+      },
+      "random_forest": {
+        "accuracy": 0.7284541429656269,
+        "balanced_accuracy": 0.7111536533984338,
+        "precision": 0.7236842105263158,
+        "recall": 0.5911404272416795,
+        "f1": 0.6507316353986216,
+        "roc_auc": 0.8219665826851341,
+        "confusion_matrix_labels_0_1": [
+          [
+            33186,
+            6741
+          ],
+          [
+            12211,
+            17655
+          ]
+        ],
+        "train_positive_rate": 0.40135923673629426,
+        "test_positive_rate": 0.4279225710314788
+      }
+    },
+    "flood_25yr": {
+      "baseline_most_frequent": {
+        "accuracy": 0.5073144871262161,
+        "balanced_accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix_labels_0_1": [
+          [
+            35407,
+            0
+          ],
+          [
+            34386,
+            0
+          ]
+        ]
+      },
+      "random_forest": {
+        "accuracy": 0.7480836187010158,
+        "balanced_accuracy": 0.7463034368458852,
+        "precision": 0.821275619455491,
+        "recall": 0.6246146687605421,
+        "f1": 0.709570848062374,
+        "roc_auc": 0.8506365811516738,
+        "confusion_matrix_labels_0_1": [
+          [
+            30733,
+            4674
+          ],
+          [
+            12908,
+            21478
+          ]
+        ],
+        "train_positive_rate": 0.4476716920498489,
+        "test_positive_rate": 0.4926855128737839
+      }
+    },
+    "flood_100yr": {
+      "baseline_most_frequent": {
+        "accuracy": 0.6958720788617769,
+        "balanced_accuracy": 0.5,
+        "precision": 0.6958720788617769,
+        "recall": 1.0,
+        "f1": 0.8206657654613045,
+        "roc_auc": 0.5,
+        "confusion_matrix_labels_0_1": [
+          [
+            0,
+            21226
+          ],
+          [
+            0,
+            48567
+          ]
+        ]
+      },
+      "random_forest": {
+        "accuracy": 0.7655782098491253,
+        "balanced_accuracy": 0.7069360825768553,
+        "precision": 0.8157327163640642,
+        "recall": 0.8566310457718204,
+        "f1": 0.8356817885084715,
+        "roc_auc": 0.7751744062374046,
+        "confusion_matrix_labels_0_1": [
+          [
+            11828,
+            9398
+          ],
+          [
+            6963,
+            41604
+          ]
+        ],
+        "train_positive_rate": 0.6693087727660622,
+        "test_positive_rate": 0.6958720788617769
+      }
+    }
+  }
+}

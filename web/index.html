@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FloodNet Davao | Road Flood-Risk Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">DAVAO ROAD NETWORK</p>
+        <h1>Flood-risk explorer</h1>
+      </div>
+      <label class="scenario-control">
+        <span>Flood scenario</span>
+        <select id="scenario">
+          <option value="5yr">5-year return period</option>
+          <option value="25yr">25-year return period</option>
+          <option value="100yr">100-year return period</option>
+        </select>
+      </label>
+    </header>
+
+    <main>
+      <section class="map-frame" aria-label="Interactive flood risk map">
+        <div id="map"></div>
+        <div id="status" class="status" role="status">Loading map data…</div>
+        <aside class="legend">
+          <h2>Model-estimated flood exposure</h2>
+          <div><i class="swatch low"></i>Lower &lt; 25%</div>
+          <div><i class="swatch moderate"></i>Moderate 25–49%</div>
+          <div><i class="swatch high"></i>High 50–74%</div>
+          <div><i class="swatch very-high"></i>Very high ≥ 75%</div>
+        </aside>
+      </section>
+      <p class="disclaimer">
+        This educational model estimates whether a road overlaps the available
+        flood-hazard map. Return periods describe flood scenarios, not when a
+        flood will happen. Do not use this map for emergency or safety decisions.
+      </p>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/map.js"></script>
+  </body>
+</html>
