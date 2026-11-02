@@ -105,8 +105,10 @@ provided scenario labels; they do not give a chance or date of future flooding.
 3. Open **Run and Debug** with **Ctrl+Shift+D**, select
    **FloodNet Davao: Run local website**, then press **F5**. VS Code starts
    the local Python server and opens the map in Chrome.
-4. Present the website at <http://127.0.0.1:8000>. Stop the server by pressing
-   **Shift+F5** in VS Code or **Ctrl+C** in the server terminal.
+4. Present the website at <http://127.0.0.1:8000>. To stop the server, open
+   the Command Palette, choose **Tasks: Run Task**, then choose
+   **FloodNet: Stop local website**. **Shift+F5** closes the debugger/browser;
+   use the stop task to stop the server process.
 
 The launch profile and tasks are defined in `.vscode\launch.json` and
 `.vscode\tasks.json`. On Windows, this setup expects Miniforge installed at

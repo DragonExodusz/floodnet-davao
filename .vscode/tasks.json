@@ -18,38 +18,35 @@
         },
         {
             "label": "FloodNet: Start local website",
-            "type": "process",
-            "command": "${env:USERPROFILE}\\miniforge3\\Scripts\\conda.exe",
+            "type": "shell",
+            "command": "powershell.exe",
             "args": [
-                "run",
-                "--no-capture-output",
-                "-n",
-                "floodnet-ml",
-                "uvicorn",
-                "app:app",
-                "--host",
-                "127.0.0.1",
-                "--port",
-                "8000"
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\scripts\\start_local_server.ps1"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "isBackground": true,
-            "problemMatcher": {
-                "owner": "floodnet",
-                "pattern": [
-                    {
-                        "regexp": "^INFO:     Uvicorn running on (http://127\\.0\\.0\\.1:8000)",
-                        "message": 1
-                    }
-                ],
-                "background": {
-                    "activeOnStart": true,
-                    "beginsPattern": "^INFO:     Started server process",
-                    "endsPattern": "^INFO:     Uvicorn running on http://127\\.0\\.0\\.1:8000"
-                }
-            }
+            "problemMatcher": []
+        },
+        {
+            "label": "FloodNet: Stop local website",
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\scripts\\stop_local_server.ps1"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
         }
     ]
 }
