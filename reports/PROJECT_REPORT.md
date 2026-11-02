@@ -1,14 +1,12 @@
 # Machine Learning Classification of Road Flood-Hazard Exposure in Metro Davao
 
-**Course:** [Course name]
-
-**Instructor:** [Instructor name]
-
-**Prepared by:** [Student name(s)]
-
-**Institution:** [School name]
-
-**Submission date:** [Date]
+| Report detail | Fill in before submission |
+|---|---|
+| Course | [Course name] |
+| Instructor | [Instructor name] |
+| Prepared by | [Student name(s)] |
+| Institution | [School name] |
+| Submission date | [Date] |
 
 > **Scope note:** This is a report on classifying road exposure to supplied
 > flood-hazard scenarios. It is not a weather forecast, a flood-event
