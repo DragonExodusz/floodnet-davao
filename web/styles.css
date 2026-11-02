@@ -26,6 +26,26 @@ body {
   border-bottom: 1px solid #dfe6eb;
 }
 
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.company-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #c6d7e1;
+  border-radius: 999px;
+  background: #edf5f9;
+  color: #184d6b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .eyebrow {
   margin: 0 0 0.3rem;
   color: #537182;
@@ -145,6 +165,34 @@ main {
   line-height: 1.5;
 }
 
+.site-footer {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1rem auto 0;
+  padding: 1rem clamp(1rem, 4vw, 3rem) 1.5rem;
+  background: #fff;
+  border-top: 1px solid #dfe6eb;
+  color: #3d4d59;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.footer-brand strong {
+  color: #184d6b;
+}
+
+.footer-devs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+
 .road-popup {
   display: grid;
   gap: 0.25rem;
@@ -160,6 +208,11 @@ main {
     align-items: stretch;
     flex-direction: column;
     gap: 0.8rem;
+  }
+
+  .header-meta {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   select {
